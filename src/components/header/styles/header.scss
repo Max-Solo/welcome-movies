@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $header_bg;
+  padding-right: 40px;
+  padding-left: 40px;
+  
+  &__menu,
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__item,
+  &__button {
+    color: $grey_200;
+    
+    &:hover {
+      color: $grey_50;
+    }
+  }
+  
+  &__link,
+  &__button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__span {
+    margin-right: 5px;
+  }
+  
+  &__item {
+    margin-right: 30px;
+  }
+  
+  &__element {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
