@@ -2,8 +2,9 @@
   font-family: "Poppins", sans-serif;
 }
 
-nav, li {
+nav, ul {
   list-style-type: none;
+  margin: 0;
 }
 
 a {
@@ -15,4 +16,8 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+img {
+  width: 100%;
 }

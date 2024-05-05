@@ -3,7 +3,7 @@ import { createPinia } from 'pinia'
 
 import "normalize.css";
 
-import App from './App.vue'
+import App from './WelcomeMovies.vue'
 import router from './router'
 
 const app = createApp(App)

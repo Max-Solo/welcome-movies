@@ -1,0 +1,23 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  background-color: $aside_bg;
+  filter: blur(80%);
+  padding: 20px 40px 150px;
+
+  
+  &__logo {
+    max-width: 30px;
+  }
+}
+
+.aside-logo {
+  display: flex;
+  align-items: center;
+  
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
