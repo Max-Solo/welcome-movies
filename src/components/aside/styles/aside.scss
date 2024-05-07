@@ -1,23 +1,78 @@
 .aside {
   display: flex;
   flex-direction: column;
+  padding: 35px 40px 100px;
   background-color: $aside_bg;
-  filter: blur(80%);
-  padding: 20px 40px 150px;
 
   
   &__logo {
     max-width: 30px;
+    margin-bottom: 60px;
+  }
+  
+  &__menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__item {
+    margin-bottom: 15px;
+  }
+  
+  &__link,
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    color: $grey_200;
+    
+    &:hover {
+      color: $primary_400;
+    }
+  }
+  
+  &__button {
+    align-self: flex-start
+  }
+  
+  &__ico {
+    font-size: 20px;
+  }
+  
+  &__span {
+    display: block;
+    padding-left: 12px;
   }
 }
 
 .aside-logo {
+  position: relative;
   display: flex;
   align-items: center;
   
+  &__ico {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-45%);
+  }
+  
+  &__description {
+    padding-left: 30px;
+  }
+  
   &__text {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
+    
+    &--purple {
+      color: $primary_400;
+    }
+    
+    &--blue {
+      color: $secondary_500;
+    }
   }
 }
 

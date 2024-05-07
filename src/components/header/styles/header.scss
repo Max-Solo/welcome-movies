@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 30px;
   padding-right: 40px;
   padding-left: 40px;
-  padding-top: 30px;
   
   &__menu,
   &__actions {
@@ -18,7 +18,7 @@
     color: $grey_200;
     
     &:hover {
-      color: $grey_50;
+      color: $primary_400;
     }
   }
   

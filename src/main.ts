@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import "normalize.css";
-
 import App from './WelcomeMovies.vue'
 import router from './router'
 

@@ -2,4 +2,19 @@
   display: grid;
   grid-template-columns: 270px 1fr;
   min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  
+  &__body {
+    background-color: $primary_900;
+    background-image: url('@/assets/images/body-decor.png');
+    background-repeat: no-repeat;
+    background-position: 0 -150px;
+    background-size: cover;
+    
+    .webp & {
+      background-image: url('@/assets/images/body-decor.webp');
+    }
+  }
+  
+
 }
