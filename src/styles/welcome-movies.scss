@@ -10,19 +10,27 @@
     background-position: 0 -150px;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-left: 40px;
+    padding-right: 40px;
     
     .webp & {
       background-image: url('@/assets/images/body-decor.webp');
     }
   }
   
+  
+  
   &__title {
-    padding-left: 40px;
     color: $grey_50;
     font-size: 54px;
     font-weight: 600;
     line-height: 70px;
     letter-spacing: -2px;
+    margin-top: 30px;
+  }
+  
+  &__search {
+    margin-top: 30px;
   }
 
 }
