@@ -3,6 +3,9 @@
     <Aside class="welcome-movies__aside" />
     <div class="welcome-movies__body">
       <Header />
+        <h1 class="welcome-movies__title">
+          Вышли недавно
+        </h1>
       <Search />
     </div>
   </div>

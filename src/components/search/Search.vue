@@ -1,6 +1,5 @@
 <template>
-  <section class="search">
-    <h1 class="search__title">Вышли недавно</h1>
+  <section class="search" :class="searchClasses">
     <div class="search__body">
       <label for="search">
         <i class="search__ico pi pi-search"></i>
@@ -9,8 +8,9 @@
         placeholder="Ищите, что нравится"
         type="text"
         id="search"
+        @focus="onFocusBlur"
+        @blur="onFocusBlur"
         autocomplete="off"
-        ref="searchInput"
         v-model="inputValue"
         class="search__input"
       />
@@ -19,8 +19,19 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { computed, ref, unref } from 'vue'
+  import { EventTypes } from '@/types/enums/eventTypes'
+
   const inputValue = ref('')
+
+  const isFocused = ref(false)
+  const onFocusBlur = (event: FocusEvent) => {
+    isFocused.value = event.type === EventTypes.FOCUS
+  }
+
+  const searchClasses = computed(() => ({
+    'search--is-focus': unref(isFocused)
+  }))
 </script>
 
 <style scoped lang="scss">

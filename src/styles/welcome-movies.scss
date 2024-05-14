@@ -1,14 +1,14 @@
 .welcome-movies {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 270px 1fr;
-  min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   
   &__body {
     background-color: $primary_900;
     background-image: url('@/assets/images/body-decor.png');
-    background-repeat: no-repeat;
     background-position: 0 -150px;
+    background-repeat: no-repeat;
     background-size: cover;
     
     .webp & {
@@ -16,5 +16,13 @@
     }
   }
   
+  &__title {
+    padding-left: 40px;
+    color: $grey_50;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: -2px;
+  }
 
 }

@@ -4,14 +4,6 @@
   padding-right: 40px;
   padding-left: 40px;
   
-  &__title {
-    color: $grey_50;
-    font-size: 54px;
-    font-weight: 600;
-    line-height: 70px;
-    letter-spacing: -2px;
-  }
-  
   &__body {
     max-width: 350px;
     min-height: 62px;
@@ -24,7 +16,7 @@
     background-color: $black_10;
     transition: border .2s;
     
-    &:focus-within {
+    #{$self}--is-focus & {
       border: 1px solid $grey_200;
     }
   }
@@ -35,7 +27,7 @@
     font-size: 24px;
     transition: color .2s;
     
-    #{$self}__body:focus-within & {
+    #{$self}--is-focus & {
       color: $grey_200;
     }
   }
