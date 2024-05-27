@@ -12,13 +12,12 @@
     background-size: cover;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 20px;
     
     .webp & {
       background-image: url('@/assets/images/body-decor.webp');
     }
   }
-  
-  
   
   &__title {
     color: $grey_50;
@@ -31,6 +30,7 @@
   
   &__search {
     margin-top: 30px;
+    margin-bottom: 70px;
   }
 
 }

@@ -5,7 +5,7 @@
       <Header />
       <h1 class="welcome-movies__title">Вышли недавно</h1>
       <Search class="welcome-movies__search"/>
-      <MoviesList />
+      <MoviesList/>
     </div>
   </div>
 </template>

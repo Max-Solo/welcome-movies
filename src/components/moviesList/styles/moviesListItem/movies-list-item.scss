@@ -1,3 +1,84 @@
-.movies-list {
+.movies-list-item {
+  position: relative;
+  max-width: 282px;
+  min-height: 470px;
+  padding: 8px 8px 10px;
+  border-radius: 12px;
+  background-color: $card_bg;
 
+  &__content {
+    position: relative;
+    z-index: 100;
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  &__poster {
+    width: 266px;
+    height: 400px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75) 0s;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  
+  &__description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 8px;
+    margin-top: 12px;
+  }
+
+  &__caption {
+    color: $grey_50;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  
+  &__text {
+    margin-left: 8px;
+  }
+  
+  &__status {
+    display: flex;
+    align-items: center;
+    color: $success_400;
+    margin-top: 10px;
+  }
+
+  &__rating {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: $black_65;
+    backdrop-filter: blur(8px);
+    user-select: none;
+  }
+
+  &__favorite,
+  &__points {
+    min-height: 20px;
+    padding: 0;
+    color: $warning_500;
+    font-weight: 500;
+  }
+
+  &__favorite {
+    margin-right: 4px;
+    padding-top: 2px;
+    font-size: 14px;
+  }
 }
