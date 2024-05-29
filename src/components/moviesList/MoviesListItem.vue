@@ -1,7 +1,7 @@
 <template>
   <div class="movies-list-item">
     <div class="movies-list-item__content">
-      <a href="#" class="movies-list-item__link">
+      <a v-tooltip="'Enter your username'" href="#" class="movies-list-item__link">
         <picture class="movies-list-item__picture">
           <source srcset="@/assets/images/poster.png" type="image/webp" />
           <img
@@ -22,8 +22,15 @@
           <i class="pi pi-eye"></i>
           <span class="movies-list-item__text">Просмотрено</span>
         </p>
+        <p
+          v-if="isNoComeOut"
+          class="movies-list-item__status movies-list-item__status"
+        >
+          <i class="pi pi-clock"></i>
+          <span class="movies-list-item__text"> Скоро </span>
+        </p>
       </div>
-      <button type="button" class="movies-list-item__rating">
+      <button v-tooltip.top="'Enter your username'" type="button" class="movies-list-item__rating">
         <i class="pi pi-star movies-list-item__favorite"></i>
         <span class="movies-list-item__points">6.8</span>
       </button>
@@ -33,7 +40,9 @@
 <script setup lang="ts">
   import { ref } from 'vue'
 
-  const isWatched = ref(true)
+  const isWatched = ref(false)
+  const isNoComeOut = ref(false)
+  const isAddMovie = ref(true)
 </script>
 
 <style scoped lang="scss">

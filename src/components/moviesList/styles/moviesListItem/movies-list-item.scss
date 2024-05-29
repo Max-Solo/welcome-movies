@@ -23,10 +23,6 @@
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75) 0s;
     object-fit: cover;
-
-    &:hover {
-      transform: scale(1.03);
-    }
   }
   
   &__description {
@@ -57,7 +53,7 @@
   &__rating {
     position: absolute;
     top: 8px;
-    left: 8px;
+    right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,6 +62,11 @@
     background-color: $black_65;
     backdrop-filter: blur(8px);
     user-select: none;
+    transition: background-color .1s ease-in;
+    
+    &:hover {
+      background-color: $black_10;
+    }
   }
 
   &__favorite,
