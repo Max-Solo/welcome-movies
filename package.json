@@ -21,10 +21,10 @@
     "pinia": "^2.1.7",
     "postcss-pxtorem": "^6.1.0",
     "primeicons": "^7.0.0",
-    "primevue": "^3.52.0",
     "stylelint-order": "^6.0.4",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-tippy": "v6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

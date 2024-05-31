@@ -5,14 +5,14 @@
   font-family: Montserrat, sans-serif;
   
   &__body {
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
     background-color: $primary_900;
     background-image: url('@/assets/images/body-decor.png');
     background-position: 0 -150px;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
     
     .webp & {
       background-image: url('@/assets/images/body-decor.webp');
@@ -20,17 +20,22 @@
   }
   
   &__title {
+    margin-top: 30px;
     color: $grey_50;
     font-size: 54px;
     font-weight: 600;
     line-height: 70px;
     letter-spacing: -2px;
-    margin-top: 30px;
   }
   
   &__search {
     margin-top: 30px;
     margin-bottom: 70px;
   }
+}
 
+:global(.tippy-box[data-theme~='wm']) {
+  opacity: .9;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
 }

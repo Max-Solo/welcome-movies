@@ -1,7 +1,7 @@
 <template>
   <div class="movies-list-item">
     <div class="movies-list-item__content">
-      <a v-tooltip="'Enter your username'" href="#" class="movies-list-item__link">
+      <a href="#" class="movies-list-item__link">
         <picture class="movies-list-item__picture">
           <source srcset="@/assets/images/poster.png" type="image/webp" />
           <img
@@ -30,7 +30,7 @@
           <span class="movies-list-item__text"> Скоро </span>
         </p>
       </div>
-      <button v-tooltip.top="'Enter your username'" type="button" class="movies-list-item__rating">
+      <button v-tooltip="'В избранное'" type="button" class="movies-list-item__rating">
         <i class="pi pi-star movies-list-item__favorite"></i>
         <span class="movies-list-item__points">6.8</span>
       </button>

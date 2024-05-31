@@ -23,14 +23,18 @@
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75) 0s;
     object-fit: cover;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
   }
   
   &__description {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 8px;
     margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
   }
 
   &__caption {
@@ -44,10 +48,10 @@
   }
   
   &__status {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     color: $success_400;
-    margin-top: 10px;
   }
 
   &__rating {
