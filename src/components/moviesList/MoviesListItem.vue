@@ -3,7 +3,10 @@
     <div class="movies-list-item__content">
       <a href="#" class="movies-list-item__link">
         <picture class="movies-list-item__picture">
-          <source srcset="@/assets/images/poster.png" type="image/webp" />
+          <source
+            srcset="@/assets/images/poster.png"
+            type="image/webp"
+          />
           <img
             alt="poster"
             src="@/assets/images/poster.png"
@@ -13,36 +16,67 @@
       </a>
       <div class="movies-list-item__description">
         <p class="movies-list-item__name">
-          <span class="movies-list-item__caption">How I Met Your Mother</span>
+          <span class="movies-list-item__caption"
+            >How I Met Your Mother</span
+          >
         </p>
         <p
           v-if="isWatched"
           class="movies-list-item__status movies-list-item__status"
         >
           <i class="pi pi-eye"></i>
-          <span class="movies-list-item__text">Просмотрено</span>
+          <span class="movies-list-item__text"
+            >Просмотрено</span
+          >
         </p>
         <p
           v-if="isNoComeOut"
           class="movies-list-item__status movies-list-item__status"
         >
           <i class="pi pi-clock"></i>
-          <span class="movies-list-item__text"> Скоро </span>
+          <span class="movies-list-item__text">
+            Скоро
+          </span>
         </p>
       </div>
-      <button v-tooltip="'В избранное'" type="button" class="movies-list-item__rating">
-        <i class="pi pi-star movies-list-item__favorite"></i>
+      <button
+        @click="addToFavorite"
+        v-tooltip="ratingData.tooltip"
+        type="button"
+        class="movies-list-item__rating"
+      >
+        <i
+          class="pi movies-list-item__favorite"
+          :class="ratingData.ico"
+        >
+        </i>
         <span class="movies-list-item__points">6.8</span>
       </button>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { computed, ref, unref } from 'vue'
 
   const isWatched = ref(false)
   const isNoComeOut = ref(false)
-  const isAddMovie = ref(true)
+  const isFavorite= ref(true) // TODO триггер добавления в избранное
+
+  function addToFavorite() {
+    isFavorite.value = !isFavorite.value
+  }
+
+  const ratingData = computed(() =>
+    !unref(isFavorite)
+      ? {
+          tooltip: 'Добавить в избранное',
+          ico: 'pi-star'
+        }
+      : {
+          tooltip: 'Убрать из избранного',
+          ico: 'pi-star-fill'
+        }
+  )
 </script>
 
 <style scoped lang="scss">

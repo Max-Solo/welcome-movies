@@ -1,6 +1,6 @@
 <template>
   <section class="movies-list">
-    <MoviesListItem />
+    <MoviesListItem v-for="(item, i) in 23" :key="i" />
   </section>
 </template>
 <script setup lang="ts">

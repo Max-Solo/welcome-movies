@@ -1,7 +1,7 @@
 .movies-list-item {
   position: relative;
-  max-width: 282px;
-  min-height: 470px;
+  min-width: 100%;
+  min-height: 450px;
   padding: 8px 8px 10px;
   border-radius: 12px;
   background-color: $card_bg;
@@ -18,8 +18,8 @@
   }
 
   &__poster {
-    width: 266px;
-    height: 400px;
+    width: 100%;
+    min-height: 400px;
     cursor: pointer;
     transition: transform 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75) 0s;
     object-fit: cover;

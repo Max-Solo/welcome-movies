@@ -1,0 +1,7 @@
+@function adapt($size, $screen) {
+  @return calc($size / $screen * 100vw);
+}
+
+@function adaptMobile($size, $screen, $coef) {
+  @return calc($size / $screen * $coef * 100vw);
+}
