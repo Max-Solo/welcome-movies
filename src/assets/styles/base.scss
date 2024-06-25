@@ -1,7 +1,19 @@
 :root {
-  font-size: adapt(16px, 1920px);
+  font-size: adapt(16, 1920);
   
-  @media (max-width: 1920px) {
+  @media (max-width: $desk) {
     font-size: 16px;
+  }
+  
+  @media (max-width: $xxxl) {
+    font-size: adapt(16, 1600);
+  }
+  
+  @media (max-width: $xl) {
+    font-size: adapt(16, 1280);
+  }
+  
+  @media (max-width: $lg) {
+    font-size: adapt(16, 1024);
   }
 }

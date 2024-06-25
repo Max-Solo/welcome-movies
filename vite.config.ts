@@ -15,6 +15,7 @@ export default defineConfig({
         additionalData: `
               @import "@/assets/styles/helpers/colors";
               @import "@/assets/styles/helpers/functions";
+              @import "@/assets/styles/helpers/variables";
             `
       }
     }

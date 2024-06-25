@@ -1,5 +1,15 @@
 .aside {
   background-color: $aside_bg;
+  
+  @media (max-width: $lg) {
+    transform: translateX(0);
+    min-height: 100vh;
+    min-width: 270px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+  }
 
   &__wrapper {
     position: fixed;

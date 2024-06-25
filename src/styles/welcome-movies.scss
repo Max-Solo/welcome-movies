@@ -4,6 +4,10 @@
   grid-template-columns: 270px 1fr;
   font-family: Montserrat, sans-serif;
   
+  @media (max-width: $lg) {
+    grid-template-columns: 1fr;
+  }
+  
   &__body {
     padding-right: 40px;
     padding-bottom: 20px;
@@ -26,6 +30,10 @@
     font-weight: 600;
     line-height: 70px;
     letter-spacing: -2px;
+    
+    @media (max-width: 1600px) {
+      font-size: 50px;
+    }
   }
   
   &__search {

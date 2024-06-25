@@ -20,16 +20,16 @@
       </div>
       <nav class="aside__menu">
         <li class="aside__item">
-          <a href="#" class="aside__link">
+          <RouterLink to="/" class="aside__link">
             <i class="aside__ico pi pi-home"></i>
             <span class="aside__span">Главная</span>
-          </a>
+          </RouterLink>
         </li>
         <li class="aside__item">
-          <a href="#" class="aside__link">
+          <RouterLink to="/favorites" class="aside__link">
             <i class="aside__ico pi pi-heart"></i>
             <span class="aside__span">Избранное</span>
-          </a>
+          </RouterLink>
         </li>
         <li class="aside__item">
           <a href="#" class="aside__link">
