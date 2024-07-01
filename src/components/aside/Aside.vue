@@ -2,20 +2,10 @@
   <section class="aside">
     <div class="aside__wrapper">
       <div class="aside__logo aside-logo">
-        <img
-          :src="getImageUrl('logo', 'svg')"
-          alt="logo"
-          class="aside-logo__ico"
-        />
+        <img :src="getImageUrl('logo', 'svg')" alt="logo" class="aside-logo__ico" />
         <p class="aside-logo__description">
-          <span
-            class="aside-logo__text aside-logo__text--purple"
-            >Welcome</span
-          >
-          <span
-            class="aside-logo__text aside-logo__text--blue"
-            >Movies</span
-          >
+          <span class="aside-logo__text aside-logo__text--purple">Welcome</span>
+          <span class="aside-logo__text aside-logo__text--blue">Movies</span>
         </p>
       </div>
       <nav class="aside__menu">
@@ -49,11 +39,20 @@
         <span class="aside__span">Выход</span>
       </button>
     </div>
+    <button class="aside__close">
+      <i class="aside__close-ico pi pi-times"></i>
+    </button>
   </section>
+  <div class="aside__overlay"></div>
 </template>
 
 <script setup lang="ts">
   import { getImageUrl } from '@/utils/getImageUrl'
+  import { useIsMobileStore } from '@/stores/isMobile'
+  import { storeToRefs } from 'pinia'
+
+  const store = useIsMobileStore()
+  const { isMobile } = storeToRefs(store)
 </script>
 
 <style scoped lang="scss">

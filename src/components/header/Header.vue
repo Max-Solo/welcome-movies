@@ -23,11 +23,22 @@
           <i class="pi pi-sign-in"></i>
         </button>
       </li>
+      <li v-if="isMobile" class="header__element">
+        <button class="header__button">
+          <i class="pi pi-bars"></i>
+        </button>
+      </li>
     </ul>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { useIsMobileStore } from '@/stores/isMobile'
+  import { storeToRefs } from 'pinia'
+
+  const store = useIsMobileStore()
+  const { isMobile } = storeToRefs(store)
+</script>
 
 <style scoped lang="scss">
   @import '@/components/header/styles/header';
